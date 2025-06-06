@@ -65,4 +65,40 @@ function countpending (task){
     }
     return count;
 }
-console.log(countpending(`these item currently pending : ${list}`))
+console.log(countpending(list));
+
+
+//  Q4 = Product Pricing (Object)  
+//  You’re managing a catalog of products where each product is represented as an object with properties: name, category, and price. Write a function that updates the price of a specific product.
+
+const product  = [ {
+    name : "laptop",
+    category : "electronic",
+    price : 25000
+},{
+    name : "mobile",
+    category : "electronic",
+    price : 5000
+},{
+    name : "washing machine",
+    category : "electronic",
+    price : 45000
+},{
+    name : "television",
+    category : "electronic",
+    price : 10000000
+},]
+
+function updateprice (catalog,productname,newprice ){
+    for(let prdt of catalog){
+        if(prdt.name === productname){
+            prdt.price = newprice
+            return true
+        }
+    }
+    return false
+}
+
+console.log(updateprice(product, "laptop", 24000));
+console.log(product);
+
