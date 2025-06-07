@@ -99,6 +99,20 @@ function updateprice (catalog,productname,newprice ){
     return false
 }
 
-console.log(updateprice(product, "laptop", 24000));
-console.log(product);
+// console.log(updateprice(product, "laptop", 24000));
+// console.log(product);
 
+const studentscores = [80, 90, 75, 60, 95];
+
+function calculateaverage(Scores){
+    if(Scores.length === 0) return 0;
+
+    let total = 0;
+    for(let score of Scores){
+        total += score;
+    }
+    return total  / Scores.length
+}
+
+const average = calculateaverage(studentscores);
+console.log("average : ", average);
